@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1459603_iz943pr0acf.css" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+			
+			div .abc:hover {
+				border-bottom: solid 1px #333;
+				padding-bottom: 10px;
+				color: #90af6b;
+			}
+			
+			.clearfix:after {
+				clear: both;
+			}
+			
+			.clearfix {
+				zoom: 1;
+			}
+			
+			.swiper-pagination .swiper-pagination-bullet {
+				width: 60px;
+				height: 10px;
+				background: #CCCCCC;
+				border-radius: 0;
+			}
+			
+			.el-carousel__item img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.oi:hover>img {
+				transition: all 1s;
+			}
+			
+			.oi:hover>img {
+				transform: scale(1.1);
+			}
+			
+			.oi:hover>.po {
+				color: #90af6b;
+				z-index: 9;
+				position: relative;
+			}
+			
+			.oi .opk {
+				width: 0;
+				transition: all 1s;
+			}
+			
+			.oi:hover .opk {
+				width: 100%
+			}
+			
+			.oiu {
+				background-image: url('https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvYTMxNGNjMzEzM2JhMGRkOTE2NTA0NmYwYTZjMDlmZjcuanBn.jpg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center center;
+			}
+			
+			.kl>div {
+				transition: all .5s;
+			}
+			
+			.kl>div:hover {
+				margin-top: -20px;
+			}
+			
+			.clearfix:before,
+			.clearfix:after {
+				content: '';
+				display: block;
+			}
+			
+			[v-cloak] {
+				display: none;
+			}
+			
+			.container {
+				width: 100%;
+				height: auto;
+				margin-top: 50px;
+				padding-bottom: 150px;
+			}
+			
+			.bg {
+				width: 100%;
+			}
+			
+			.big_st {
+				float: right;
+				width: 900px;
+			}
+			
+			.st {
+				line-height: 50px;
+				text-align: center;
+				float: left;
+				width: 100px;
+			}
+			
+			.bigBox {
+				width: 90%;
+				height: auto;
+				margin: 0 auto;
+			}
+			
+			.cts {
+				width: 18%;
+				height: 350px;
+				float: left;
+				display: inline-block;
+				/*border:1px #000 solid;*/
+				margin-right: 1%;
+				margin-left: 1%;
+				box-sizing: border-box;
+				margin-bottom: 10px;
+			}
+			
+			.cts .div1 {
+				padding-left: 2%;
+				box-sizing: border-box;
+				width: 100%;
+				background-color: rgba(244, 244, 244, 0.5);
+				height: 200px;
+			}
+			
+			.cts .div1 img {
+				width: 80%;
+				height: 200px;
+				margin: 0 auto;
+				border-radius: 50%;
+				margin-left: 10%;
+			}
+			
+			.cts .div2 {
+				margin-top: 20px;
+				padding-left: 4%;
+			}
+			
+			.cts .div2 p {
+				font-size: 18px;
+				line-height: 50px;
+			}
+			
+			.cts .div2 .p_2 {
+				color: #8e8e8e;
+			}
+			
+			.cts .div2 div {
+				width: 50px;
+				height: 30px;
+				border: 1px #ccc solid;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			.bn {
+				width: 100%;
+				height: 2px;
+				background: #CCCCCC;
+				position: relative;
+			}
+			
+			.bn span {
+				position: absolute;
+				width: 0;
+				height: 2px;
+				background: rgb(144, 175, 107);
+				transition: all .7s;
+			}
+			
+			.cts:hover .bn span {
+				width: 100%;
+			}
+			
+			.cts:hover .vb {
+				color: rgb(144, 175, 107);
+			}
+			
+			.cts:hover .oiy {
+				color: rgb(144, 175, 107);
+				border: solid 1px rgb(144, 175, 107);
+			}
+			
+			.hj span {
+				font-size: 40px;
+			}
+			
+			.el-carousel__item h3 {
+				color: #475669;
+				font-size: 18px;
+				opacity: 0.75;
+				line-height: 300px;
+				margin: 0;
+			}
+			
+			.nm {
+				border-right: solid 1px #CCCCCC;
+			}
+			
+			.nm:last-child {
+				border: none !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+			<div style="width:90%;min-height: 100px;margin: 0 auto;position: relative;z-index: 9;overflow: hidden;">
+				<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvZjc0MTI0MDFiMDZjZjdjYmI4OTg5MTBjMTE2YzZlNzYucG5n.png" alt="" style="width: 80px;height: 50px;margin-top: 15px;" />
+				<div style="float: right;margin-right: 150px;">
+					<div style="float: left;line-height: 100px;padding: 0 20px;font-size: 20px;" v-for="i in arr">
+						<a :href="i.path" style="color: #333;" class="abc">
+							{{i.name}}
+						</a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<router-view></router-view>
+			</div>
+			<div style="width: 100%;min-height: 170px;background: #f3f3f3;padding-top: 80px;">
+				<div style="width: 70%;margin: 0 auto;background: #f3f3f3;min-height: 170px;overflow: hidden;display: flex;#969696">
+					<p style="flex: 1;line-height: 30px;font-size: 36px;">联系<br /><span style="font-size: 20px;">Contact</span></p>
+					<p style="flex: 1;">关注我们</p>
+					<div style="flex: 1;">
+						<p style="line-height: 40px;">起飞页自助建站平台</p>
+						<p style="line-height: 30px;">地址：苏州市建外SOHO东区2号楼</p>
+						<p style="line-height: 30px;">邮编：100000</p>
+						<p style="line-height: 30px;">电话：010-69557550</p>
+					</div>
+					<div style="flex: 1;display: flex;text-align: center;">
+						<div style="flex: 1;">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDgvNjFjNTQ1NWFmY2MyNGViMmZjY2VkOTk3YmMwMWE2MGMtMTAweDEwMC5wbmc_p_p100_p_3D.png" alt="" />
+							<p style="margin-top: 15px;">微信</p>
+						</div>
+						<div style="flex: 1;text-align: center;">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDgvNjFjNTQ1NWFmY2MyNGViMmZjY2VkOTk3YmMwMWE2MGMtMTAweDEwMC5wbmc_p_p100_p_3D.png" alt="" />
+							<p style="margin-top: 15px;">微博</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<template id="no1">
+			<div>
+				<div style="position: relative;">
+					<div class="block" style="background: #f7f7f7;margin-top: -100px;width: 100%;">
+						<el-carousel trigger="click" height="1000px" width="100%">
+							<el-carousel-item v-for="item in arr1" :key="item">
+								<img :src="item" />
+							</el-carousel-item>
+						</el-carousel>
+					</div>
+					<div style="background: #f7f7f7;">
+						<p style="text-align: center;font-size: 24px;padding-top: 70px;">新茶上市</p>
+						<p style="text-align: center;font-size: 14px;margin-top: 5px; color: #999;">Tea Leave</p>
+						<div style="width: 80%;margin: 0 auto;overflow: hidden;">
+							<div style="text-align: center;float: left;width: 33%;" v-for="i in arr2" class="oi">
+								<img :src="i.img_url" alt="" />
+								<p class="po">{{i.title}}</p>
+								<span style="width: 40%;height: 2px;line-height: 50px;background: #ccc;display: inline-block;position:relative"><span class="opk" style="height: 2px;line-height: 50px;background:#90af6b;display: inline-block;position:absolute;left:0;top:0;z-index: 10;"></span></span>
+
+								<p style="line-height: 40px;">{{i.ice}}</p>
+							</div>
+						</div>
+						<p style="background: #90af6b;width: 5%;margin: 50px auto 70px;font-size: 40px;text-align:center ;color: #FFFFFF;">&rarr;</p>
+					</div>
+					<div style="min-height: 547px;padding-top: 200px;" class="oiu">
+						<p style="text-align: center;font-size: 24px;color: #fff;">关于我们</p>
+						<p style="text-align: center;font-size: 14px;margin-top: 5px; color: #fff;">About</p>
+						<div style="width: 80%;margin: 40px auto 0;background: #FFFFFF;min-height: 350px;overflow: hidden;padding: 10px 40px 0 10px">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvOGJiMjZlNDUwZjY0NjBkNWNiMmE4NTg4YjBhYTY5ZmMtNTQweDI4MC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 40%;" />
+							<div style="float: left;width: 55%;margin-left: 5%;">
+								<p style="margin-top: 80px;line-height: 40px;">茶叶源于中国，茶叶最早是被作为祭品使用的。但从春秋后期就被人们作为菜食，在西汉中期发展为药用，西汉后期才发展为宫廷高级饮料，普及民间作为普通饮料那是西晋以后的事。发现最早人工种植茶叶的遗迹在浙江余姚的田螺山遗址，已有6000多年的历史。饮茶始于中国。</p>
+								<p style="background: #90af6b;color: #FFFFFF;padding: 10px;width: 10%;text-align: center;margin-top: 20px;">了解更多</p>
+							</div>
+						</div>
+					</div>
+					<div style="width: 100%;min-height: 110px;background: #FFFFFF;">
+						<div style="display: flex;min-height: 110px;background: #fff;padding-top: 60px;width: 80%;margin: 0 auto;">
+							<img v-for="i in arr3" @click="ind=1" :src="i" alt="" style="flex: 1;text-align: center;width: 90px;height: 60px;;" />
+						</div>
+					</div>
+					<div class="lunbg" style="background: #000000;width: 100%;height: 976px;position: fixed;left: 0;top: 0;z-index: 10;" v-show="ind==1">
+						<div style="position: relative;width: 100%;height: 100%;" class="hj">
+							<span style="position: absolute;left: 50%;top: 0;color: #FFFFFF;" class="iconfont icon-zantingtingzhi"></span>
+							<span style="position: absolute;left: 50%;top: 0;color: #FFFFFF;display: none;" class="iconfont icon-bofang"></span>
+							<span style="position: absolute;right: 0;top: 0;color: #FFFFFF;z-index: 20;" class="iconfont icon-delete2" @click="ind=2"></span>
+							<el-carousel indicator-position="outside" style="padding-top: 400px;">
+								<el-carousel-item v-for="item in arr3" style="text-align: center;">
+									<img :src="item" alt="" style="width: 200px;height: 70px;margin: 0 auto;display: block;" />
+								</el-carousel-item>
+							</el-carousel>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="no2">
+			<div>
+				<div style="background: #fff;">
+					<div style="width: 100%;">
+						<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNDlhZTM4YTg2N2VmNzVhNDA3M2RmNzRiYTFmOThjMjYuanBn.jpg" style="height: 175px;width: 100%;" />
+					</div>
+					<tits>
+						<div slot="na1">
+							<p style="font-size: 24px;">春茶</p>
+							<p style="margin-top: 40px;line-height: 30px;">饮茶不但是传统饮食文化，同时，由于茶中含有多种抗氧化物质与抗氧化营养素，对于消除自由基有一定的效果。<br />因此喝茶也有助防老，具养生保健功能，每天喝三两杯茶可起到防老的作用。</p>
+						</div>
+					</tits>
+					<div style="padding-top:100px;width: 80%;margin: 0 auto;min-height: 200px;border-bottom: solid 1px #CCCCCC;border-top: solid 1px #CCCCCC;display: flex;" class="nb">
+						<kl b_num=138 b_title="历史悠久"></kl>
+						<kl b_num=423 b_title="冲泡温度"></kl>
+						<kl b_num=89 b_title="碧螺春等级"></kl>
+						<kl b_num=567 b_title="茶园面积"></kl>
+					</div>
+					<tits>
+						<div slot="na1">
+							<p style="font-size: 24px;">喝茶的好处</p>
+							<p style="margin-top: 40px;line-height: 30px;">
+								饮茶不但是传统饮食文化，同时，由于茶中含有多种抗氧化物质与抗氧化营养素，对于消除自由基有一定的效果。因此喝茶也有助防老，具养生保健功能，每天喝三两杯茶可起到防老的作用。茶叶中含有多种维生素和氨基酸，喝茶对于清油解腻，增强神经兴奋以及消食利尿也具有一定的作用。 但并不是喝得越多越好，也不是所有的人都适合喝茶。一般来说，每天1-2次，每次3-5克、400毫升的饮量是比较适当的。一般，人们说喝茶还指喝水。</p>
+						</div>
+					</tits>
+					<pins>
+						<div slot="na2" style="width: 32%;float: left;">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNjczNTEyZGI2NGM2N2U0MzdjMjMxNGMyYzc3MjRmM2YuanBn.jpg" alt="" style="width: 100%;" />
+							<p style="font-size: 18px;line-height: 46px;">茶园规划</p>
+							<p style="line-height: 30px;font-size: 14px;text-align: left;">明万历二十三年（1595）张源撰写的《茶录》中，对当时洞庭东西山绿茶（炒青）的采摘、炒制有较为详细的记载，其炒制过程分杀青、轻团、焙干等工序，已与当今洞庭碧螺春的炒制工艺基本一致。</p>
+						</div>
+						<div slot="na2" style="width: 32%;float: left;margin-left: 2%;margin-right: 2%;">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNGRmMDFhNzRmYTBhZWFiODIyYmM1MThhY2M2ZWFhOTYuanBn.jpg" alt="" style="width: 100%;" />
+							<p style="font-size: 18px;line-height: 46px;">茶叶品质鉴别</p>
+							<p style="line-height: 30px;font-size: 14px;text-align: left;">明万历二十三年（1595）张源撰写的《茶录》中，对当时洞庭东西山绿茶（炒青）的采摘、炒制有较为详细的记载，其炒制过程分杀青、轻团、焙干等工序，已与当今洞庭碧螺春的炒制工艺基本一致。</p>
+						</div>
+						<div slot="na2" style="width: 32%;float: left;">
+							<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNDVhMmJlZTE1ZjE5MTc0OTQ2OTIxMTBiMjNkYWRiZDUuanBn.jpg" alt="" style="width: 100%;" />
+							<p style="font-size: 18px;line-height: 46px;">冲泡工艺</p>
+							<p style="line-height: 30px;font-size: 14px;text-align: left;">明万历二十三年（1595）张源撰写的《茶录》中，对当时洞庭东西山绿茶（炒青）的采摘、炒制有较为详细的记载，其炒制过程分杀青、轻团、焙干等工序，已与当今洞庭碧螺春的炒制工艺基本一致。</p>
+						</div>
+					</pins>
+				</div>
+			</div>
+		</template>
+		<template id="no3">
+			<div>
+				<div class="container clearfix">
+					<div style="overflow: hidden;" class="bg clearfix">
+						<div style="width:100%;margin:0 auto;height:50px;background-color: rgba(244,244,244,0.5);;margin-bottom:15px" class="clearfix">
+							<div style="float: left;line-height:46px;padding-left:60px;font-size: 36px;">茶叶</div>
+							<div class="big_st clearfix">
+								<div v-for="(i,$index) in arr" :style="{borderBottom:$index==index?'solid 1px #ccc':''}" class="st" @click="index=$index">
+									{{i.title}}
+								</div>
+							</div>
+						</div>
+						<div v-if="arr" style="width:100%" class="clearfix">
+							<div v-for="(i,$index) in arr" v-show="$index==index" class="bigBox clearfix">
+								<!-- {{i.content}} -->
+								<div v-for="arr1 in i.content" class="cts">
+									<div class="div1">
+										<img :src="arr1.url1">
+									</div>
+									<div class="div2">
+										<p class="vb">{{arr1._title}}</p>
+										<p class="bn">
+											<span></span>
+										</p>
+										<p class="p_2">{{arr1._price}}</p>
+										<div class="oiy">&rarr;</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="no4">
+			<div>
+				<div style="width: 100%;">
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNzNlYjg4NTNhNmZkNTZiYWRhN2Q4ZjI4NjNkOWM1ODguanBn.jpg" style="height: 255px;width: 100%;" />
+				</div>
+				<tits>
+					<div slot="na1">
+						<p style="font-size: 24px;">种植基地</p>
+						<p style="margin-top: 40px;line-height: 30px;">
+							公司拥有完整、科学、质量管理体系，通过ISO14001，ISO22000国际质量体系认 证，有机产品认证，拥有大量先进、专业的生产设备和检测仪器，秉承“顾客至上，锐意进取”的经营理念，坚持“客户第一”的原则为广大客户提供优质的服务。</p>
+					</div>
+				</tits>
+				<div style="width: 65%;margin: 0 auto;overflow: hidden;margin-bottom: 80px;">
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNWQ3ZTc0ZDI3NTEzM2MxZmZkYTVkZTFmY2FiNGFkZTctMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNzQwMmZhZTFiYWE3OTgxODA4MWYwM2I2N2UwZTU0ZDItMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvOWVlYzA0NGVmYmNiZGQwYzE0M2QwYmZhMGY2MjNkMDUtMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMGQ5YWMxYWEzOWNmZmIzYzk4NDE0Njk4YzZmZGQwZjQtMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvOWVkYTg5ZjIzMWEzOGFjODE5NmJiYmYyOTA5YWEyZjctMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMTI1ZmM2NTk4YWE0NmFlY2JkOWY1NDAzYzkwYjM3ODctMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNGRmMDFhNzRmYTBhZWFiODIyYmM1MThhY2M2ZWFhOTYtMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMmZlZDQ0NjA2NDI0N2FmZWI4YTk0ZmQ0NGRiMDc5NzktMzAweDMwMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: left;width: 280px;height: 280px;margin: 5px 5px;" />
+				</div>
+			</div>
+		</template>
+		<template id="no5">
+			<div>
+				<div style="width: 100%;">
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvOTIwYWRjMGM1M2U4OGQ2MTY0OWE0MzYwMmY5MWQ0NzQuanBn.jpg" style="height: 225px;width: 100%;" />
+				</div>
+				<div style="width: 80%;margin: 0 auto;min-height: 500px;">
+					<div style="overflow: hidden;padding: 10px 20px;margin-top: 50px;">
+						<div style="width: 30%;min-height: 500px;float: left;margin-top: 60px;">
+							<div style="text-align: center;line-height: 40px;">
+								<a href="#/no5/">
+									全部新闻
+								</a>
+							</div>
+							<div style="text-align: center;line-height: 40px;">
+								<a href="#/no5/no2">
+									新茶动态
+								</a>
+							</div>
+							<div style="text-align: center;line-height: 40px;">
+								<a href="#/no5/no3">
+									产品新闻
+								</a>
+							</div>
+						</div>
+						<div style="float: left;padding: 10px 20px;width: 60%;">
+							<router-view></router-view>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template id="no6">
+			<div>
+				<div style="width: 100%;">
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cDovLzVjZGQzYWE1YzQ2ZWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOS8wNS81NjM0YjlkMWViYWQ3MGRjYWVmYzU0MzQxYTRjM2RhYS5qcGc_p_p100_p_3D.jpg" style="height: 175px;width: 100%;" />
+				</div>
+				<tits>
+					<div slot="na1">
+						<p style="margin-top: 40px;line-height: 30px;">
+							中国历史上有很长的饮茶纪录，已经无法确切地查明到底是在什么年代了，但是大致的时代是有说法的。并且也可以找到证据显示，确实在世界上的很多地方饮茶的习惯是从中国传过去的。</p>
+					</div>
+				</tits>
+				<numa>
+					<div slot="na3" style="flex: 1;text-align: center;">
+						<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cDovLzVjZGQzYWE1YzQ2ZWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC9mYzdmNmQ5NzgzM2NiOTlkOWJjZjU1ZDMyY2M2MWI0Ni04MHg4MC5qcGc_p_p100_p_3D.jpg" alt="" />
+						<p style="line-height: 60px;font-size: 22px;">邮箱</p>
+						<p>info@email.com</p>
+					</div>
+					<div slot="na3" style="flex: 1;text-align: center;border-right:solid 1px #CCCCCC;border-left: solid 1px #CCCCCC;">
+						<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cDovLzVjZGQzYWE1YzQ2ZWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC9kNjhkMWVhYWNmODIyZDE4ZDE5MjYzYzdlMTljZjc1YS04MHg4MC5qcGc_p_p100_p_3D.jpg" alt="" />
+						<p style="line-height: 60px;font-size: 22px;">手机</p>
+						<p>13725415481/010 6888 6888</p>
+					</div>
+					<div slot="na3" style="flex: 1;text-align: center;">
+						<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cDovLzVjZGQzYWE1YzQ2ZWEudDczLnFpZmVpeWUuY29tL3FmeS1jb250ZW50L3VwbG9hZHMvMjAxOS8wNC82ZmQ5NDYwYjYzMzVmNTM2ZjUzNjQ1MWJiYmEyMDlkZC04MHg4MC5qcGc_p_p100_p_3D.jpg" alt="" />
+						<p style="line-height: 60px;font-size: 22px;">地址</p>
+						<p>苏州市建外SOHO东区2号楼</p>
+					</div>
+				</numa>
+				<ditu></ditu>
+			</div>
+		</template>
+		<template id="tits">
+			<div>
+				<div style="width: 70%;text-align: center;margin: 0 auto;padding-top: 70px;padding-bottom: 60px;">
+					<slot name="na1"></slot>
+				</div>
+			</div>
+		</template>
+		<template id="pins">
+			<div>
+				<div style="width: 70%;text-align: center;margin: 0 auto;overflow: hidden;padding-bottom: 170px;" class="kl">
+					<slot name="na2"></slot>
+				</div>
+			</div>
+		</template>
+		<template id="kl">
+			<div style="flex: 1;text-align: center;">
+				<div style="font-size: 60px;font-family: courier new;color: #3c3c3c;" class="nm">
+					{{num}}
+				</div>
+				<div>
+					{{title}}
+				</div>
+			</div>
+		</template>
+		<template id="numa">
+			<div style="display: flex;width: 80%;margin: 0 auto;padding-bottom: 60px;">
+				<slot name="na3"></slot>
+			</div>
+		</template>
+		<template id="lea">
+			<div>
+				<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">喝茶的好处有哪些 6大好处告诉你</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">中国历史上有很长的饮茶纪录，已经无法确切地查明到底是在什么年代了，但是大致的时代是有说法的。并且也可以找到证据显示，确实在世界上的很多地方饮茶的习惯是从中国传过去的。所以，很多人认为饮茶就是中国人首创...</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNjczNTEyZGI2NGM2N2U0MzdjMjMxNGMyYzc3MjRmM2YtMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+			</div>
+		</template>
+		<template id="leb">
+			<div>
+<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">2019茶叶展-第十六届上海国际茶业交易春季博览会</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">野生种遍见于中国长江以南各省的山区，为小乔木状，叶片较大，常超过10厘米长，长期以来，经广泛栽培，毛被及叶型变化很大。茶叶可作饮品，含有多种有益成分，并有保健功效。</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNWQ3ZTc0ZDI3NTEzM2MxZmZkYTVkZTFmY2FiNGFkZTctMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+				<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">喝茶也会有危险——茶这样喝真的很危险</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">但是也有人能够找到证据指出，饮茶的习惯不仅仅是中国人发明的，在世界上的其他一些地方也是饮茶的发明地，例如印度、非洲等。1823年，一个英国侵略军的少校在印度发现了野生的大茶树，从而有人开始认定茶的发源...</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMGQ5YWMxYWEzOWNmZmIzYzk4NDE0Njk4YzZmZGQwZjQtMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+				<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">喝茶养生好处多 但是喝错茶竟会致丧命</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">唐．陆羽《茶经》：“茶之为饮，发乎神农氏。”，在中国的文化发展史上，往往是把一切与农业、与植物相关的事物起源最终都归结于神农氏。而中国饮茶起源于神农的说法也因民间传说而衍生出不同的观点。有人认为茶是神...</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYjc0NWU4ZGE0NTU0ODIyYWJjMjNhMmE1NGQ2NDJkM2EtMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+				<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">服用“阿司匹林”尽量少喝茶</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">晋．常璩《华阳国志．巴志》：“周武王伐纣，实得巴蜀之师，......茶蜜......皆纳贡之。”这一记载表明在周朝的武王伐纣时，巴国就已经以茶与其它珍贵产品纳贡与周武王了。《华阳国志》中还记载，那时并...</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMmZlZDQ0NjA2NDI0N2FmZWI4YTk0ZmQ0NGRiMDc5NzktMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+				<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">碧螺春茶叶喝第几泡才是最好喝的呢?</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">中国饮茶起于六朝的说法，有人认为起于“孙皓以茶代酒”，有人认为系“王肃茗饮”而始，日本、印度则流传饮茶系起于“达摩禅定”的说法。然而秦汉说具有史料证据确凿可考，因而削弱了六朝说的正确性。</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvMTI1ZmM2NTk4YWE0NmFlY2JkOWY1NDAzYzkwYjM3ODctMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+			</div>
+		</template>
+		<template id="lec">
+			<div>
+<div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">喝什么茶叶好?春天适合喝什么茶?喝白茶喝什么茶叶好?</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">2017年10月27日，世界卫生组织国际癌症研究机构公布的致癌物清单初步整理参考，茶在3类致癌物清单中。属于对人类致癌性可疑，尚无充分的人体或动物数据的物质类。</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNzQwMmZhZTFiYWE3OTgxODA4MWYwM2I2N2UwZTU0ZDItMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div><div style="overflow: hidden;width: 100%;margin-top: 40px;" slot="nb2">
+					<div style="float: left;width: 60%;">
+						<p style="font-size: 18px;line-height: 40px;color: #333;">喝什么茶好?如何正确喝茶?</p>
+						<p style="font-size: 12px;line-height: 30px;color: #CCCCCC;">中国饮茶起源众说纷纭：追溯中国人饮茶的起源，有的认为起于上古，有的认为起于周，起于秦汉、三国、南北朝、唐代的说法也都有，造成众说纷纭的主要原因是因唐代以前无“茶”字，而只有“荼”字的记载，直到茶经的作...</p>
+						<p style="line-height: 40px;">阅读正文</p>
+					</div>
+					<img src="https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNGRmMDFhNzRmYTBhZWFiODIyYmM1MThhY2M2ZWFhOTYtMjAweDEzMC5qcGc_p_p100_p_3D.jpg" alt="" style="float: right;width: 30%;height: 180px;" />
+				</div>
+			</div>
+		</template>
+		<template id="wenzi">
+			<div style="min-height: 200px;margin-top: 20px;">
+				<slot name="nb2"></slot>
+			</div>
+		</template>
+	</body>
+	<script src="vue.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="vue-router.js"></script>
+
+</html>
+<script type="text/javascript">
+	Vue.component('teas', {
+		template: '#teas'
+	})
+	Vue.component('tits', {
+		template: '#tits'
+	})
+	Vue.component('pins', {
+		template: '#pins'
+	})
+	Vue.component('numa', {
+		template: '#numa'
+	})
+	Vue.component('wenzi', {
+		template: '#wenzi'
+	})
+	Vue.component('kl', {
+		template: '#kl',
+		props: ['b_num', 'b_title'],
+		data() {
+			return {
+				num: 0,
+				title: this.b_title
+			}
+		},
+		mounted() {
+			var time = setInterval(() => {
+				this.num++
+					if(this.num >= this.b_num) {
+						this.num = this.b_num
+						clearInterval(time)
+					}
+			}, 1000 / this.b_num)
+		}
+	})
+	var router = new VueRouter({
+		routes: [{
+				path: '/',
+				component: {
+					template: '#no1',
+					data() {
+						return {
+							ind: 0,
+							arr1: ['https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNTkxNjY4MzYwNTc4MTlhMDVjNGZmNmQ5NWFjMzU0OGIuanBn.jpg', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDUvNjFhNzJlOWFhNThhNzVhZjY0ZGFlMjgzYTAzMDQ1NDAuanBn.jpg'],
+							arr2: [{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvODMxNGZmNmYyYjkyNzcxZmY2N2U5NjdlZjQyNjAzZWItNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '茉莉花茶',
+									ice: '￥223.0'
+								},
+								{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMGFkMzdiZDQwOGNjYWMwYzI0Y2JmNzdiMDZiNDg4ODAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '白牡丹',
+									ice: '￥1,253.0'
+								},
+								{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvOTc4NTUwMDZjYzA1MDQ1OGVkMDFmZjE2N2I4YjNkOTctNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '白毫银针',
+									ice: '￥258.0'
+								},
+								{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMDMzMjg2Zjc0ZWU4M2ZiM2U5MTllZTgwMDc4MjRjNTAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '云南普洱茶',
+									ice: '￥500.0'
+								},
+								{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjY1ZjU4NWU5ZmNmYjkxMDBlMzc1YmFkMDQyNTkwMzEtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '湖北老青茶',
+									ice: '￥400.0'
+								},
+								{
+									img_url: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjhlYTFmMDQ0Y2NhOWI4NWEzYWZkMzExYzczZTY3MjQtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+									title: '霍山黄芽蒙洱银针',
+									ice: '￥711.0'
+								},
+							],
+							arr3: ['https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjMwZTdjYTlmNmIwNjRhYjM2NzIzZGZiYTViMzU2MjQtMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYzU0OGUxMmQwM2FhMTE4MmE1ZmM5YWY4YjBlZDNhODMtMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvZmE3YjM1YzA3Mzg5Mjg4ODVjOTY3NDRjYTNkZjAzNDQtMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMTdlYWNiYTc0ZmU4MDZkMTk1NGI5MWY0MTdhMzUzZDgtMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMDFjMDE4YjAwYzA0MWMwYmQ3MTIzYTkzZjVhMTkyOTgtMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png', 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMWQyNGZhYmI0ZWRiODk1MGUxMmI3MzkxOGU3OTY1ZDktMTUweDYwLnBuZw_p_p100_p_3D_p_p100_p_3D.png']
+						}
+					},
+					created() {
+						console.log(this.ind)
+					}
+				}
+			},
+			{
+				path: '/no2',
+				component: {
+					template: '#no2',
+				}
+			},
+			{
+				path: '/no3',
+				component: {
+					template: '#no3',
+					data() {
+						return {
+							index: 0,
+							arr1: '',
+							arr: [{
+									title: '全部',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvODMxNGZmNmYyYjkyNzcxZmY2N2U5NjdlZjQyNjAzZWItNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '茉莉花茶',
+											_price: '￥223.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMGFkMzdiZDQwOGNjYWMwYzI0Y2JmNzdiMDZiNDg4ODAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '白牡丹',
+											_price: '￥1235.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvOTc4NTUwMDZjYzA1MDQ1OGVkMDFmZjE2N2I4YjNkOTctNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '白毫银针',
+											_price: '￥223.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMDMzMjg2Zjc0ZWU4M2ZiM2U5MTllZTgwMDc4MjRjNTAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '云南普洱茶',
+											_price: '￥1235.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjY1ZjU4NWU5ZmNmYjkxMDBlMzc1YmFkMDQyNTkwMzEtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '湖北老青茶',
+											_price: '￥400.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjhlYTFmMDQ0Y2NhOWI4NWEzYWZkMzExYzczZTY3MjQtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '霍山黄芽蒙洱银针',
+											_price: '￥711.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNWM4NmNiNjkzOTdjOTM4NWQ4MzI0MDdlZDhhY2EwMmUtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '蒙顶黄芽',
+											_price: '￥450.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNWNjYjNmZjU3YWU2YjBmMmRiYWZmOTk2MzljY2E4N2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '冻顶乌龙茶',
+											_price: '￥620.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNDM1OTBkNjFjM2ViOGU2YzUyYWU3ZmM2N2I3YjQwZGMtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '大红袍',
+											_price: '￥3480.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYzNjYmVkZWE4N2JmNzZjOTUyODdjZWUyYWQ4MjgyM2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '祁门红茶',
+											_price: '￥568.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjc0Y2E2YTE1Nzc3Mjk4MTFhMDJiOTg0Y2ZlMzliY2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '正山小种',
+											_price: '￥952.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYTY5N2NjZmUxNzIwNTg1YjcwM2E2OTk2ZWY3N2U4NmEtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '西湖龙井特级',
+											_price: '￥888.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYWNkYWZkYWVmNGVlM2NiNmJlYTFjNWI5MWE2MzQwOGMtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '洞庭碧螺春',
+											_price: '￥880.0'
+										},
+									]
+								},
+								{
+									title: '绿茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYTY5N2NjZmUxNzIwNTg1YjcwM2E2OTk2ZWY3N2U4NmEtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '西湖龙井特级',
+											_price: '￥888.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYWNkYWZkYWVmNGVlM2NiNmJlYTFjNWI5MWE2MzQwOGMtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '洞庭碧螺春',
+											_price: '￥880.0'
+										},
+									]
+								},
+								{
+									title: '黄茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjhlYTFmMDQ0Y2NhOWI4NWEzYWZkMzExYzczZTY3MjQtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '霍山黄芽蒙洱银针',
+											_price: '￥711.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNWM4NmNiNjkzOTdjOTM4NWQ4MzI0MDdlZDhhY2EwMmUtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '蒙顶黄芽',
+											_price: '￥450.0'
+										},
+									]
+								},
+								{
+									title: '乌龙茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNWNjYjNmZjU3YWU2YjBmMmRiYWZmOTk2MzljY2E4N2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '冻顶乌龙茶',
+											_price: '￥620.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvNDM1OTBkNjFjM2ViOGU2YzUyYWU3ZmM2N2I3YjQwZGMtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '大红袍',
+											_price: '￥3480.0'
+										},
+									]
+								},
+								{
+									title: '红茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvYzNjYmVkZWE4N2JmNzZjOTUyODdjZWUyYWQ4MjgyM2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '祁门红茶',
+											_price: '￥568.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjc0Y2E2YTE1Nzc3Mjk4MTFhMDJiOTg0Y2ZlMzliY2MtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '正山小种',
+											_price: '￥952.0'
+										},
+									]
+								},
+								{
+									title: '黑茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMDMzMjg2Zjc0ZWU4M2ZiM2U5MTllZTgwMDc4MjRjNTAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '云南普洱茶',
+											_price: '￥1235.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMjY1ZjU4NWU5ZmNmYjkxMDBlMzc1YmFkMDQyNTkwMzEtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '湖北老青茶',
+											_price: '￥400.0'
+										},
+									]
+								},
+								{
+									title: '白茶',
+									content: [{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvMGFkMzdiZDQwOGNjYWMwYzI0Y2JmNzdiMDZiNDg4ODAtNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '白牡丹',
+											_price: '￥1235.0'
+										},
+										{
+											url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvOTc4NTUwMDZjYzA1MDQ1OGVkMDFmZjE2N2I4YjNkOTctNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+											_title: '白毫银针',
+											_price: '￥223.0'
+										},
+									]
+								},
+								{
+									title: '花茶',
+									content: [{
+										url1: 'https://ccdn.goodq.top/caches/9b69daffc17579b848483c854813cad2/aHR0cHM6Ly81Y2RkM2FhNWM0NmVhLnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTkvMDQvODMxNGZmNmYyYjkyNzcxZmY2N2U5NjdlZjQyNjAzZWItNDAweDQwMC5qcGc_p_p100_p_3D.jpg',
+										_title: '茉莉花茶',
+										_price: '￥223.0'
+									}, ]
+								},
+							]
+						}
+					}
+				}
+			},
+			{
+				path: '/no4',
+				component: {
+					template: '#no4'
+				}
+			},
+			{
+				path: '/no5',
+				component: {
+					template: '#no5',
+				},
+				children: [{
+						path: '/',
+						component: {
+							template: '#lea'
+						}
+					},
+					{
+						path: 'no2',
+						component: {
+							template: '#leb'
+						}
+					},
+					{
+						path: 'no3',
+						component: {
+							template: '#lec'
+						}
+					},
+				]
+
+			},
+			{
+				path: '/no6',
+				component: {
+					template: '#no6'
+				}
+			},
+		]
+	})
+	new Vue({
+		el: "#box",
+		data: {
+			arr: [{
+					name: '首页',
+					path: '#/'
+				},
+				{
+					name: '关于',
+					path: '#/no2'
+				},
+				{
+					name: '茶叶',
+					path: '#/no3'
+				},
+				{
+					name: '基地',
+					path: '#/no4'
+				},
+				{
+					name: '新闻',
+					path: '#/no5'
+				},
+				{
+					name: '联系',
+					path: '#/no6'
+				},
+			],
+
+		},
+		router
+	})
+</script>
